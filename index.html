@@ -15,44 +15,37 @@
         }
 
         header {
-            background: transparent;
-            color: white;
+            background: url('https://media-content-storage.b-cdn.net/xone/web-assets/feature%20image.jpg') no-repeat center center/cover;
             text-align: center;
-            padding: 0;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: relative;
         }
 
-        header img {
+        .header-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .header-section img {
             max-width: 150px;
             height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
 
-        header::before {
-            content: '';
-            background: url('https://media-content-storage.b-cdn.net/xone/web-assets/feature%20image.jpg') no-repeat center center/cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        nav {
-            text-align: center;
-            padding: 1rem 0;
-            background: #f4f4f4;
-        }
-
-        nav a {
+        .header-section a {
             margin: 0 1rem;
             text-decoration: none;
             color: #00DB00;
             font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
         }
 
         .section {
@@ -80,15 +73,22 @@
 </head>
 <body>
     <header>
-        <img src="https://media-content-storage.b-cdn.net/xone/web-assets/Xone_Logo%20RGB-04.png" alt="Xone Communications Logo">
+        <div class="header-section">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+        <div class="header-section">
+            <img src="https://media-content-storage.b-cdn.net/xone/web-assets/Xone_Logo%20RGB-04.png" alt="Xone Communications Logo">
+        </div>
+        <div class="header-section">
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
     <section id="home" class="section">
         <h2>Welcome to Xone Communications</h2>
@@ -106,7 +106,7 @@ Xone Communications has achieved a Broad-Based Black Economic Empowerment (B-BBE
 
     <section id="services" class="section">
         <h2>Our Services</h2>
-        <p>Connecting your content with technology to drive revenue growth.</p>
+        <p>Our focus is on finding the best service solution for you, by connecting your content with our technology. Our aim is to assist you in navigating through the fast-paced technological environment and ensure that you are in the best position to pursue revenue growth, while we take care of the rest.</p>
     </section>
 
     <section id="contact" class="section">
@@ -119,3 +119,4 @@ Xone Communications has achieved a Broad-Based Black Economic Empowerment (B-BBE
     </footer>
 </body>
 </html>
+
