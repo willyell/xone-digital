@@ -55,29 +55,38 @@
 
         .header-nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             padding: 1rem;
             position: absolute;
             top: 0;
             z-index: 2;
-            align-items: center;
         }
 
         .header-nav nav {
             display: flex;
-            gap: calc(10px + 10%);
+            gap: 1rem;
+        }
+
+        .header-nav nav:first-child {
+            margin-right: 1rem;
+        }
+
+        .header-nav nav:last-child {
+            margin-left: 1rem;
+        }
+
+        .header-nav img {
+            max-height: 96px;
+            height: auto;
+            margin: 0 1rem;
         }
 
         .header-nav a {
             text-decoration: none;
             color: white;
             font-weight: 600;
-        }
-
-        .header-nav img {
-            max-height: 60px;
-            height: auto;
         }
 
         .section {
@@ -152,3 +161,4 @@ Xone Communications has achieved a Broad-Based Black Economic Empowerment (B-BBE
     </footer>
 </body>
 </html>
+
