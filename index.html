@@ -16,36 +16,62 @@
 
         header {
             background: url('https://media-content-storage.b-cdn.net/xone/web-assets/feature%20image.jpg') no-repeat center center/cover;
-            text-align: center;
-            padding: 1rem 0;
+            height: 100vh;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            color: white;
             position: relative;
         }
 
-        .header-section {
-            flex: 1;
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header .header-content {
+            position: relative;
+            z-index: 2;
             text-align: center;
         }
 
-        .header-section img {
-            max-width: 150px;
-            height: auto;
-        }
-
-        .header-section a {
-            margin: 0 1rem;
-            text-decoration: none;
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             color: #00DB00;
-            font-weight: 600;
         }
 
-        nav {
+        header p {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+        }
+
+        .header-nav {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        .header-nav nav {
+            display: flex;
             gap: 1rem;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
         }
 
         .section {
@@ -73,20 +99,21 @@
 </head>
 <body>
     <header>
-        <div class="header-section">
+        <div class="header-nav">
             <nav>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
             </nav>
-        </div>
-        <div class="header-section">
-            <img src="https://media-content-storage.b-cdn.net/xone/web-assets/Xone_Logo%20RGB-04.png" alt="Xone Communications Logo">
-        </div>
-        <div class="header-section">
+            <img src="https://media-content-storage.b-cdn.net/xone/web-assets/Xone_Logo%20RGB-04.png" alt="Xone Communications Logo" style="max-height: 50px;">
             <nav>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
+        </div>
+        <div class="header-content">
+            <h1>Microservice Implementation Platform</h1>
+            <p>API Implementation</p>
+            <p>Carrier Billing</p>
         </div>
     </header>
 
@@ -119,4 +146,3 @@ Xone Communications has achieved a Broad-Based Black Economic Empowerment (B-BBE
     </footer>
 </body>
 </html>
-
