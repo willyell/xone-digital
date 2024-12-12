@@ -15,15 +15,31 @@
         }
 
         header {
-            background: #00DB00;
+            background: transparent;
             color: white;
-            padding: 1rem 0;
             text-align: center;
+            padding: 0;
+            position: relative;
         }
 
         header img {
             max-width: 150px;
             height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        header::before {
+            content: '';
+            background: url('https://media-content-storage.b-cdn.net/xone/web-assets/feature%20image.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
         nav {
@@ -50,6 +66,10 @@
             border-radius: 5px;
         }
 
+        h1, h2 {
+            color: #00DB00;
+        }
+
         .footer {
             background: #333;
             color: white;
@@ -73,12 +93,15 @@
     <section id="home" class="section">
         <h2>Welcome to Xone Communications</h2>
         <p>Your partner in innovative mobile technology solutions.</p>
-        <img src="https://media-content-storage.b-cdn.net/xone/web-assets/feature%20image.jpg" alt="Hero Image">
     </section>
 
     <section id="about" class="section">
         <h2>About Us</h2>
-        <p>We thrive on potential and new opportunities, offering services to grow your business.</p>
+        <p>Xone Communications is a dynamic and innovative mobile technology company that thrives on potential and new opportunities. Our dedicated team works in partnership with clients to improve products, facilitate customer communication and satisfaction and ultimately facilitate revenue growth. With years of experience in the industry, a highly-skilled devoted and energetic support system, we can offer the finest solutions that will enable your business to realise its full potential. We are passionate about offering excellent service and enabling growth, being in partnership with our clients means that your success is our success. With our goal of shared success in mind we dedicate our time and efforts to ensure we exceed your expectations. As a growing company we strive to provide our clients with personal, professional and transparent service.  
+
+Xone Communications is committed to the ideals and requirements of Broad-Based Black Economic Empowerment (B-BBEE) with regards to equity, management control, transfer of knowledge and skills, employment equity practices and with regards to our suppliers, contractors and professional services such as auditors, labour relations consultants and legal services. 
+
+Xone Communications has achieved a Broad-Based Black Economic Empowerment (B-BBEE) Level 2 Contribution Status</p>
     </section>
 
     <section id="services" class="section">
@@ -96,4 +119,3 @@
     </footer>
 </body>
 </html>
-
